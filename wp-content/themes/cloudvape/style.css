@@ -1,0 +1,664 @@
+/*
+Theme Name: CLOUD VAPE
+Theme URI: http://cloudvape.com.ua/
+Description: Design for the website http://cloudvape.com.ua
+Author: Yuriy Khilko
+Author URI: https://www.facebook.com/profile.php?id=100000475681079
+Version: 1.0
+Tags: responsive, white, green, gray, bootstrap
+
+License: Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)
+License URI: http://creativecommons.org/licenses/by-sa/3.0/
+
+Theme for the website cloudvape.com.ua
+*/
+
+@import url('css/bootstrap.min.css');
+@import url('css/font-awesome.min.css');
+@font-face {
+    font-family: DINPro;
+    src: url(fonts/DINPro.otf);
+}
+
+@font-face {
+    font-family: BigNoodleTooOblique;
+    src: url(fonts/BigNoodleTooOblique-Italic.otf);
+}
+
+body {
+    font-family: 'DINPro', sans-serif;
+    font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.row {
+    margin-bottom: 40px;
+}
+
+.content {
+    margin-top: 130px;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    display: block;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.pad-left {
+    padding-left: 10px;
+}
+
+.bg {
+    width: 100%;
+    object-fit: cover;
+    height: 490px;
+}
+
+
+/*===================================================== COLORS =====================================================*/
+
+body,
+.navbar-default,
+.header-social-list>ul>.green-text>li,
+.header-social-list>ul>.green-text>li:hover,
+.cv-title>span,
+.modal-content {
+    background-color: #373435;
+}
+
+.header-social-list>ul li,
+.info {
+    background-color: #A9CD36;
+}
+
+footer,
+.list-contacts p,
+.header-social-list>ul li:hover,
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+.facebook>li:hover {
+    background-color: #3b5998 !important;
+}
+
+.instagram>li:hover {
+    background: url('./images/instagram-bg.jpg');
+}
+
+body,
+.navbar-default,
+.navbar-default .navbar-nav>li>a,
+.header-social-list>ul>.green-text>li:hover,
+.facebook>li:hover,
+.instagram>li:hover,
+.list-contacts a,
+.close {
+    color: #fff;
+}
+
+.navbar-default .navbar-nav>li>a:active,
+.navbar-default .navbar-nav>li>a:focus,
+.navbar-default .navbar-nav>li>a:hover,
+.header-social-list>ul>.green-text>li,
+.cv-title,
+.green,
+.button,
+.item-btn,
+.item-btn:hover,
+.list-contacts a:hover,
+.close:hover {
+    color: #A9CD36;
+}
+
+.header-social-list>ul li,
+.list-contacts p,
+footer,
+.info {
+    color: #373435;
+}
+
+.yellow,
+.max,
+.max .item-btn {
+    color: #E1B249;
+}
+
+.yellow-bg {
+    background-color: #E1B249;
+}
+
+/*===================================================== HEADER =====================================================*/
+
+.navbar {
+    min-height: 110px;
+    border: 0;
+}
+
+.navbar-brand {
+    height: inherit;
+}
+
+.navbar-brand>img {
+    height: 100px;
+}
+
+.nav.navbar-nav.navbar-right {
+    font-size: 20px;
+}
+
+.header-social-list {
+    margin-right: -5px;
+    height: 67px;
+}
+
+.header-social-list>ul {
+    float: right;
+}
+
+.header-social-list>ul li {
+    margin: 20px 5px 5px 0!important;
+}
+
+.header-social-list>ul>.green-text>li {
+    width: inherit;
+    font-size: 20px;
+    margin-right: 0;
+}
+
+
+/*===================================================== PAGES =====================================================*/
+
+.cv-title {
+    text-align: center;
+    font-weight: 400;
+    background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAF0lEQVQYV2NkwAIYV541+48uToIgNjMB5U8IB8abNbgAAAAASUVORK5CYII=) 0 15px repeat-x;
+}
+
+.cv-title.yellow {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAGUlEQVQYV2NkwAIYH27y/I8ujl0Qq3ZsggCXPAW89TAB6gAAAABJRU5ErkJggg==) 0 15px repeat-x;  
+}
+
+.cv-title>span {
+    padding: 0 15px;
+}
+
+.text-contacts {
+    width: 75%;
+}
+
+.button {
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    background-color: transparent;
+    font-size: 24px;
+    padding: 5px 15px;
+}
+
+.list-contacts {
+    font-size: 24px;
+}
+
+.list-contacts p,
+.header-social-list>ul li {
+    display: inline-block;
+    padding-top: 3px;
+    width: 27px;
+    height: 27px;
+    text-align: center;
+    border-radius: 5px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+.text-border {
+    border: 3px solid #fff;
+    padding: 5px 15px;
+    font-size: 18px;
+}
+
+.right-side {
+    float: right;
+}
+
+.left-side {
+    float: left;
+}
+
+.shop-location {
+    margin-top: 70px;
+    font-size: 30px;
+}
+
+.shop-location div {
+    display: inline-flex;
+    padding-right: 80px;
+}
+
+.banner {
+    margin-bottom: 60px;
+}
+
+.slider {
+    position: relative;
+}
+
+.text-banner {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+}
+
+.text-banner p {
+    font-size: 22px;
+    padding: 0;
+}
+
+.banner div {
+    padding: 15px;
+    margin-top: -480px;
+    width: 600px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+	padding-top: 20px;
+}
+
+.item div>img {
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+
+.item div {
+    width: 55%;
+}
+
+.item div>p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.item-img {
+    width: 45%;
+}
+
+.des {
+    height: 100px;
+}
+
+.item-btn {
+    border: 3px solid #A9CD36;
+    padding: 5px 10px;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.price {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: 9px;
+    font-size: 22px !important;
+    vertical-align: -moz-middle-with-baseline;
+    vertical-align: -webkit-baseline-middle;
+}
+
+.discription {
+    width: 100%;
+    height: 120px;
+}
+
+.discription div {
+    float: right;
+    width: 32%;
+    position: relative;
+}
+
+.info {
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    width: 150px;
+    text-align: center;
+    border-radius: 5px;
+    right: 15px;
+    top: 0 !important;
+}
+
+.discription p {
+    position: absolute;
+    top: 60px;
+}
+
+.close {
+    opacity: 1;
+}
+
+.modal-header {
+    border-bottom: 1px solid #666;
+}
+
+.modal-footer {
+    border-top: 1px solid #666;
+}
+
+.max {
+    font-family: 'BigNoodleTooOblique', sans-serif;
+    text-transform: uppercase;
+}
+
+.max>h1 {
+    font-style: italic;
+    border-bottom: 3px solid #E1B249;
+}
+
+.item .max>p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.max .item-btn {
+    border: 3px solid #E1B249;
+}
+
+.max .price {
+   margin-top: 14px;
+}
+
+.about {
+  background: transparent url(http://cloudvape.com.ua/wp-content/uploads/back_block_comp.jpg) no-repeat 50% 50%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  padding: 20px 0;
+}
+
+/*===================================================== FOOTER =====================================================*/
+
+footer {
+    height: 80px;
+    padding-top: 30px;
+    border-top: 4px solid #A9CD36;
+}
+
+
+/*===================================================== MOBILE STYLE =====================================================*/
+
+@media (min-width: 1500px) {
+    .bg {
+        height: 600px;
+    }
+    iframe {
+	height: 550px;
+    }
+}
+
+@media (min-width: 1279px) {
+    .bg {
+        object-fit: fill;
+    }
+}
+
+@media (max-width: 992px) {
+    .nav>li>a {
+        padding: 10px;
+    }
+    .navbar-right {
+        margin-right: -10px;
+    }
+    .banner div {
+        width: 60%;
+    }
+    .text-contacts {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-default .navbar-toggle:hover {
+        background-color: transparent;
+    }
+    .navbar-default .navbar-toggle {
+        border: 0;
+    }
+    .navbar-toggle .icon-bar {
+        width: 35px;
+        height: 4px;
+        border-radius: 4px;
+        margin-bottom: 5px;
+    }
+    .navbar-toggle {
+        margin-top: 20px;
+    }
+    .navbar-brand {
+        margin-top: -75px;
+        margin-left: -15px;
+    }
+    .header-social-list>ul {
+        float: right;
+        width: 100%;
+        padding-left: 5px;
+        margin-top: -30px;
+    }
+    .content {
+        margin-top: 165px;
+    }
+    .text-banner div {
+        margin-top: -50px;
+    }
+    .text-banner p {
+        font-size: 15px;
+    }
+    .bg {
+        height: 370px;
+        object-position: 20% 100%;
+        opacity: 0.5;
+    }
+    .cv-title {
+        font-size: 28px;
+        background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAFCAYAAACNbyblAAAAF0lEQVQYV2NkwAIYV541+48uToIgNjMB5U8IB8abNbgAAAAASUVORK5CYII=) 0 12px repeat-x;
+    }
+    .row {
+        margin-bottom: 20px;
+    }
+    .discription div {
+        float: right;
+        width: 100%;
+        padding-left: 15px;
+    }
+    .item div>p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    .item-img {
+        width: 40%;
+    }
+    .item div {
+        width: 60%;
+    }
+    .item {
+        align-items: flex-end;
+    }
+    .item-btn {
+        border: 2px solid #A9CD36;
+        padding: 4px 8px;
+        font-size: 16px;
+    }
+    .price {
+        margin-left: 4px;
+        margin-top: 2px;
+        font-size: 20px !important;
+    }
+    iframe {
+        height: 200px;
+    }
+    .banner .bg {
+        display: none;
+    }
+    .banner div {
+        padding: 15px;
+        margin-top: 0;
+        width: 100%;
+        font-size: 14px;
+    }
+    .banner {
+        margin-bottom: 0;
+    }
+    .right-side {
+        float: none;
+    }
+    .text-border {
+        font-size: 14px;
+    }
+    .shop-location div {
+        padding-right: 10px;
+	width: 100%;
+    }
+    .shop-location {
+        margin-top: 20px;
+        font-size: 17px;
+    }
+    h2 {
+        text-align: center;
+    }
+    .text-contacts {
+        width: 100%;
+        font-size: 14px;
+        margin-bottom: 40px;
+    }
+    .list-contacts {
+        font-size: 13px;
+    }
+    .text-center {
+        font-size: 14px;
+    }
+}
+
+
+/*===================================================== FORM STYLE =====================================================*/
+
+.panel-group p {
+    margin: 0;
+}
+
+.panel-default {
+    border: 0;
+}
+
+.panel-heading {
+    border: 2px solid #A9CD36;
+    padding: 0 20px;
+    border-radius: 0;
+}
+
+.panel {
+    background-color: transparent;
+}
+
+.panel-default>.panel-heading {
+    background-color: transparent;
+    border: 2px solid #A9CD36;
+}
+
+.field {
+    border: 2px solid #A9CD36;
+    background-color: #373435;
+    color: #fff;
+    width: 100%;
+    box-shadow: none;
+    padding: 5px 10px;
+    -webkit-appearance: none;
+    border-radius: 0;
+}
+
+.table {
+    margin-bottom: 0;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    border-top: 2px solid #A9CD36;
+}
+
+.panel-group .panel-heading+.panel-collapse>.list-group,
+.panel-group .panel-heading+.panel-collapse>.panel-body {
+    border-top: 0;
+}
+
+.flex-container {
+    margin-top: 15px;
+    display: -webkit-flex;
+    display: flex;
+}
+
+.flex-item {
+    -webkit-flex-grow: 0;
+    flex-grow: 0;
+    height: 70px;
+}
+h1.flex-item {
+    height: inherit;
+	font-family: 'BigNoodleTooOblique', sans-serif;
+	margin-top: 33px;
+    margin-bottom: 0px;
+}
+
+.flex-item-big {
+    -webkit-flex-grow: 1;
+    align-self: center;
+    flex-grow: 1;
+    height: 70px;
+}
+
+i.flex-item {
+    color: #A9CD36;
+    height: inherit;
+    line-height: 70px;
+}
+
+select {
+    background: url(./images/chevron-arrow-down.svg) 90% 50% no-repeat;
+    background-size: 14px;
+}
+
+select:focus,
+input:focus {
+    outline: 0;
+}
+
+input[type=submit] {
+    background-color: transparent;
+}
+
+.notification {
+    position: absolute;
+    right: 7px;
+    top: 7px;
+    z-index: 999;
+    color: red;
+}
