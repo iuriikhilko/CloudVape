@@ -23,16 +23,21 @@ function vc_remove_wp_ver_css_js( $src ) {
 }
 add_filter( 'style_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
 add_filter( 'script_loader_src', 'vc_remove_wp_ver_css_js', 9999 );
+add_filter( 'wp_calculate_image_srcset_meta', '__return_null' );
 
-// ===== Включение миниатюры в блоге ======== //
+// ===== Включение миниатюр ======== //
 
-add_theme_support('post-thumbnails', array('post'));
+add_theme_support('post-thumbnails');
 
 // ====== Добавление js ======== //
 
 add_action('wp_enqueue_scripts', 'bootstrap_js');
 function bootstrap_js() {
   wp_enqueue_script('bootstrap', get_template_directory_uri(). '/js/bootstrap.min.js', array('jquery'));
+}
+add_action('wp_enqueue_scripts', 'fontawesome_js');
+function fontawesome_js() {
+  wp_enqueue_script('fontawesome', get_template_directory_uri(). '/js/fontawesome-all.min.js', array('jquery'));
 }
 add_action('wp_enqueue_scripts', 'cloudvape_js');
 function cloudvape_js() {
@@ -45,11 +50,7 @@ function nicescroll_js() {
 
 // ========== Добавление Bootstrap Menu ================ //
 
-add_action( 'after_setup_theme', 'wpt_setup' );
-if ( ! function_exists( 'wpt_setup' ) ):
-  function wpt_setup() {
-    register_nav_menu( 'primary', __( 'Главное меню', 'wptuts' ) );
-  } endif;
-require_once('wp_bootstrap_navwalker.php');
+require_once('bs4navwalker.php');
+register_nav_menu('top', 'Top menu');
 
 ?>
