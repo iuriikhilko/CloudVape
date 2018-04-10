@@ -1,14 +1,6 @@
 (function ($) {
   $(document).ready(function () {
 
-    $("html").niceScroll({
-      scrollspeed: 20,
-      zindex: 99999,
-      cursorborder: '1px solid #999',
-      cursorcolor: '#666',
-      cursorwidth: 7
-    });
-
     $(".navbar-default .navbar-nav > li > a").on('click', function (e) {
       e.preventDefault();
       goToByScroll($(this).attr("href"));
