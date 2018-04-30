@@ -30,7 +30,7 @@
         <a class="navbar-brand" style="margin-top: -40px;" href="<?php bloginfo('url')?>">
           <img src="<?php bloginfo('url')?>/wp-content/themes/cloudvape/images/logo.png" alt="logo" height="100">
         </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="cv navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#bs4navbar" aria-controls="bs4navbar" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <?php

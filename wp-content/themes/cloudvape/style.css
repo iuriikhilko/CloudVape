@@ -178,7 +178,13 @@ footer,
 
 @media (max-width: 992px) {
     .cv-menu {
-        font-size: 1em;
+        font-size: 0.9em;
+    }
+}
+
+@media (max-width: 767px) {
+    .cv-menu {
+        font-size: 1.5em;
     }
 }
 
@@ -191,6 +197,10 @@ footer,
 .cv-menu>li>a.active,
 .cv-social>li>a {
     color: #A9CD36 !important;
+}
+
+.cv.navbar-toggler {
+    border-color: transparent;
 }
 
 /*===================================================== PAGES =====================================================*/
@@ -323,10 +333,8 @@ footer,
 }
 
 .price {
-    display: inline-block;
-    margin-left: 10px;
     margin-top: 9px;
-    font-size: 22px !important;
+    font-size: 2rem !important;
     vertical-align: -moz-middle-with-baseline;
     vertical-align: -webkit-baseline-middle;
 }
@@ -338,7 +346,7 @@ footer,
 
 .discription div {
     float: right;
-    width: 32%;
+    width: 40%;
     position: relative;
 }
 
@@ -351,11 +359,6 @@ footer,
     border-radius: 5px;
     right: 15px;
     top: 0 !important;
-}
-
-.discription p {
-    position: absolute;
-    top: 60px;
 }
 
 .close {
@@ -391,15 +394,6 @@ footer,
 
 .max .price {
    margin-top: 14px;
-}
-
-.about {
-  background: transparent url(http://cloudvape.com.ua/wp-content/uploads/back_block_comp.jpg) no-repeat 50% 50%;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding: 20px 0;
 }
 
 /*===================================================== FOOTER =====================================================*/
@@ -542,7 +536,7 @@ footer {
     }
     .shop-location {
         margin-top: 20px;
-        font-size: 17px;
+        font-size: 15px;
     }
     h2 {
         text-align: center;
