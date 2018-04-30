@@ -140,7 +140,7 @@ jQuery(document).ready(function () {
                                         .text(value)
                                     );
                             });
-                            billingWarehouseSelect.find('option').remove();
+                            billingWarehouseSelect.find('option:not(:first-child)').remove();
     
                         } catch (s) {
                             console.log("Error. Response from server was: " + json);
@@ -207,7 +207,7 @@ jQuery(document).ready(function () {
                                         .text(value)
                                     );
                             });
-                            shippingWarehouseSelect.find('option').remove();
+                            shippingWarehouseSelect.find('option:not(:first-child)').remove();
     
                         } catch (s) {
                             console.log("Error. Response from server was: " + json);
