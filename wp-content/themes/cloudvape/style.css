@@ -134,6 +134,8 @@ body,
 .header-social-list>ul>.green-text>li:hover,
 .facebook>li:hover,
 .instagram>li:hover,
+.cv-arrow>a:hover,
+.cv-link.blog:hover,
 .cv-link,
 .close {
     color: #fff;
@@ -144,10 +146,12 @@ body,
 .navbar-default .navbar-nav>li>a:hover,
 .header-social-list>ul>.green-text>li,
 .cv-title,
+.cv-arrow>a,
 .green,
 .button,
 .item-btn,
 .item-btn:hover,
+.cv-link.blog,
 .cv-link:hover,
 .close:hover {
     color: #A9CD36;
@@ -217,6 +221,11 @@ footer,
 
 .cv-title>span {
     padding: 0 15px;
+}
+
+.cv-img-blog>img {
+    display: block;
+    width: 100%;
 }
 
 .text-contacts {
