@@ -32,7 +32,7 @@ class ComposerStaticInit2a9e239860b9ba9306c061a133442aa6
         ),
         'LisDev\\' => 
         array (
-            0 => __DIR__ . '/..' . '/lis-dev/nova-poshta-api-2/src',
+            0 => __DIR__ . '/..' . '/sergeynezbritskiy/nova-poshta-api-2/src',
         ),
     );
 

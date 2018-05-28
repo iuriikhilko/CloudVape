@@ -124,13 +124,13 @@ jQuery(document).ready(function () {
                     method: "POST",
                     data: {
                         'action': NovaPoshtaHelper.getCitiesAction,
-                        'parent_area_ref': areaRef
+                        'parent_ref': areaRef
                     },
                     success: function (json) {
                         try {
                             var data = JSON.parse(json);
                             billingCitySelect
-                                .find('option')
+                                .find('option:not(:first-child)')
                                 .remove();
     
                             $.each(data, function (key, value) {
@@ -158,13 +158,13 @@ jQuery(document).ready(function () {
                     method: "POST",
                     data: {
                         'action': NovaPoshtaHelper.getWarehousesAction,
-                        'parent_area_ref': cityRef
+                        'parent_ref': cityRef
                     },
                     success: function (json) {
                         try {
                             var data = JSON.parse(json);
                             billingWarehouseSelect
-                                .find('option')
+                                .find('option:not(:first-child)')
                                 .remove();
     
                             $.each(data, function (key, value) {
@@ -191,13 +191,13 @@ jQuery(document).ready(function () {
                     method: "POST",
                     data: {
                         'action': NovaPoshtaHelper.getCitiesAction,
-                        'parent_area_ref': areaRef
+                        'parent_ref': areaRef
                     },
                     success: function (json) {
                         try {
                             var data = JSON.parse(json);
                             shippingCitySelect
-                                .find('option')
+                                .find('option:not(:first-child)')
                                 .remove();
     
                             $.each(data, function (key, value) {
@@ -225,13 +225,13 @@ jQuery(document).ready(function () {
                     method: "POST",
                     data: {
                         'action': NovaPoshtaHelper.getWarehousesAction,
-                        'parent_area_ref': cityRef
+                        'parent_ref': cityRef
                     },
                     success: function (json) {
                         try {
                             var data = JSON.parse(json);
                             shippingWarehouseSelect
-                                .find('option')
+                                .find('option:not(:first-child)')
                                 .remove();
     
                             $.each(data, function (key, value) {
@@ -296,10 +296,10 @@ jQuery(document).ready(function () {
                         },
                         success: function (json) {
                             var data = JSON.parse(json);
-                            response(jQuery.map(data, function (item) {
+                            response(jQuery.map(data, function (item, key) {
                                 return {
-                                    label: item.description,
-                                    value: item.ref
+                                    label: item,
+                                    value: key
                                 }
                             }));
                         }

@@ -38,10 +38,10 @@ jQuery(document).ready(function () {
                         },
                         success: function (json) {
                             var data = JSON.parse(json);
-                            response(jQuery.map(data, function (item) {
+                            response(jQuery.map(data, function (description, key) {
                                 return {
-                                    label: item.description,
-                                    value: item.ref
+                                    label: description,
+                                    value: key
                                 }
                             }));
                         }
@@ -67,14 +67,14 @@ jQuery(document).ready(function () {
                         data: {
                             action: NovaPoshtaHelper.getCitiesByNameSuggestionAction,
                             name: request.term,
-                            parent_area_ref: areaInputKey.val()
+                            parent_ref: areaInputKey.val()
                         },
                         success: function (json) {
                             var data = JSON.parse(json);
-                            response(jQuery.map(data, function (item) {
+                            response(jQuery.map(data, function (description, key) {
                                 return {
-                                    label: item.description,
-                                    value: item.ref
+                                    label: description,
+                                    value: key
                                 }
                             }));
                         }
@@ -99,14 +99,14 @@ jQuery(document).ready(function () {
                         data: {
                             action: NovaPoshtaHelper.getWarehousesBySuggestionAction,
                             name: request.term,
-                            parent_area_ref: cityInputKey.val()
+                            parent_ref: cityInputKey.val()
                         },
                         success: function (json) {
                             var data = JSON.parse(json);
-                            response(jQuery.map(data, function (item) {
+                            response(jQuery.map(data, function (description, key) {
                                 return {
-                                    label: item.description,
-                                    value: item.ref
+                                    label: description,
+                                    value: key
                                 }
                             }));
                         }

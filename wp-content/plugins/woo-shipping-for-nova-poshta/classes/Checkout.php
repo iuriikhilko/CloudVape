@@ -5,6 +5,7 @@ namespace plugins\NovaPoshta\classes;
 use plugins\NovaPoshta\classes\base\ArrayHelper;
 use plugins\NovaPoshta\classes\base\Base;
 use plugins\NovaPoshta\classes\base\OptionsHelper;
+use plugins\NovaPoshta\classes\repository\AreaRepositoryFactory;
 
 /**
  * Class Calculator
@@ -234,7 +235,8 @@ class Checkout extends Base
      * @param string $version minimum version, lower versions of Woocommerce are legacy
      * @return bool
      */
-    public function isLegacyWoocommerce($version = '3.0')
+    public function isLegacyWoocommerce(/** @noinspection PhpUnusedParameterInspection */
+        $version = '3.0')
     {
         //TODO compare with woocommerce version
         return !method_exists(WC()->customer, 'set_billing_address_1');
@@ -296,6 +298,7 @@ class Checkout extends Base
      */
     private function addNovaPoshtaFields($fields, $location)
     {
+        $factory = AreaRepositoryFactory::instance();
         $area = $this->customer->getMetadata('nova_poshta_region', $location);
         $city = $this->customer->getMetadata('nova_poshta_city', $location);
         $required = NP()->isGet() ?: (NP()->isNP() && NP()->isCheckout());
@@ -304,7 +307,7 @@ class Checkout extends Base
             'type' => 'select',
             'required' => $required,
             'default' => '',
-            'options' => OptionsHelper::getList(Region::findAll()),
+            'options' => OptionsHelper::getList($factory->regionRepo()->findAll()),
             'class' => array(),
             'custom_attributes' => array(),
         ];
@@ -312,7 +315,7 @@ class Checkout extends Base
             'label' => __('City', NOVA_POSHTA_DOMAIN),
             'type' => 'select',
             'required' => $required,
-            'options' => OptionsHelper::getList(City::findByParentAreaRef($area)),
+            'options' => OptionsHelper::getList($factory->cityRepo()->findByParentRefAndNameSuggestion($area)),
             'class' => array(),
             'value' => '',
             'custom_attributes' => array(),
@@ -321,7 +324,7 @@ class Checkout extends Base
             'label' => __('Nova Poshta Warehouse (#)', NOVA_POSHTA_DOMAIN),
             'type' => 'select',
             'required' => $required,
-            'options' => OptionsHelper::getList(Warehouse::findByParentAreaRef($city)),
+            'options' => OptionsHelper::getList($factory->warehouseRepo()->findByParentRefAndNameSuggestion($city)),
             'class' => array(),
             'value' => '',
             'custom_attributes' => array(),

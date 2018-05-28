@@ -31,3 +31,10 @@ Stack trace:
 #2 D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta\vendor\monolog\monolog\src\Monolog\Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
 #3 D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta\vendor\monolog\monolog\src\Monolog\Logger.php(546): Monolo
 
+2018-05-05T12:13:29+00:00 CRITICAL Uncaught exception 'UnexpectedValueException' with message 'There is no existing directory at "D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta/logs" and its not buildable: File exists' in D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php:171
+Stack trace:
+#0 D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta\vendor\monolog\monolog\src\Monolog\Handler\StreamHandler.php(97): Monolog\Handler\StreamHandler->createDir()
+#1 D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta\vendor\monolog\monolog\src\Monolog\Handler\AbstractProcessingHandler.php(37): Monolog\Handler\StreamHandler->write(Array)
+#2 D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta\vendor\monolog\monolog\src\Monolog\Logger.php(337): Monolog\Handler\AbstractProcessingHandler->handle(Array)
+#3 D:\Work\CloudVape\wp-content\plugins\woo-shipping-for-nova-poshta\vendor\monolog\monolog\src\Monolog\Logger.php(546): Monolo
+
